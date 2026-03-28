@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Death Doesn't Have a Chance</title>
+<meta name="description" content="The no-BS longevity protocol backed by actual science. 7 AI models, 200+ studies, zero supplement industry BS. What actually moves the needle.">
+<meta property="og:title" content="Death Doesn't Have a Chance">
+<meta property="og:description" content="The no-BS protocol backed by real science. What actually adds years — not what sells supplements.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=1200&q=80&auto=format&fit=crop">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://longevity.clutchindustries.com">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#0a0e14;
+  --paper:#f5f2eb;
+  --white:#ffffff;
+  --acid:#c8f53b;
+  --teal:#1a8c73;
+  --deep:#0d3d33;
+  --sky:#e8f4f0;
+  --muted:#6b7a72;
+  --border:rgba(10,14,20,.1);
+  --card:#ffffff;
+  --r:16px;
+}
+html{scroll-behavior:smooth;-webkit-tap-highlight-color:transparent}
+body{
+  font-family:'DM Sans',sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.5;
+  overflow-x:hidden;
+}
+
+/* ── PROGRESS BAR ── */
+#prog{position:fixed;top:0;left:0;height:3px;background:var(--acid);z-index:999;width:0%;transition:width .1s linear}
+
+/* ── STICKY NAV ── */
+nav{
+  position:fixed;top:3px;left:0;right:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:12px 20px;
+  background:rgba(245,242,235,.92);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+}
+.nav-logo{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:.06em;color:var(--ink);text-decoration:none}
+.nav-links{display:flex;gap:6px}
+.nav-links a{
+  font-size:11px;font-weight:500;color:var(--muted);
+  text-decoration:none;padding:6px 10px;border-radius:20px;
+  transition:all .2s;letter-spacing:.04em;text-transform:uppercase
+}
+.nav-links a:hover,.nav-links a.active{background:var(--ink);color:var(--acid)}
+
+/* ── SECTIONS ── */
+section{padding:80px 20px 60px;max-width:480px;margin:0 auto}
+@media(min-width:768px){
+  section{max-width:720px;padding:100px 40px 80px}
+  nav{padding:14px 40px}
+}
+@media(min-width:1100px){
+  section{max-width:900px}
+}
+
+/* ── HERO ── */
+#hero{
+  min-height:100svh;
+  display:flex;flex-direction:column;justify-content:flex-end;
+  padding:0;max-width:100%;
+  position:relative;overflow:hidden;
+}
+.hero-img{
+  position:absolute;inset:0;
+  background:url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=900&q=80&auto=format&fit=crop') center/cover no-repeat;
+}
+.hero-img::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(to top, rgba(10,14,20,.95) 0%, rgba(10,14,20,.6) 50%, rgba(10,14,20,.2) 100%);
+}
+.hero-content{
+  position:relative;z-index:2;
+  padding:40px 24px 48px;
+  max-width:480px;
+  margin:0 auto;width:100%;
+}
+@media(min-width:768px){.hero-content{padding:60px 60px 72px;max-width:800px}}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(200,245,59,.15);border:1px solid rgba(200,245,59,.35);
+  color:var(--acid);font-size:11px;font-weight:500;letter-spacing:.1em;
+  text-transform:uppercase;padding:6px 14px;border-radius:20px;
+  margin-bottom:24px;
+}
+.hero-eyebrow span{width:6px;height:6px;background:var(--acid);border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
+h1{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:clamp(52px,14vw,110px);
+  line-height:.92;
+  color:var(--white);
+  letter-spacing:-.01em;
+  margin-bottom:8px;
+}
+h1 em{color:var(--acid);font-style:normal}
+.hero-sub{
+  font-size:clamp(15px,3.5vw,20px);
+  color:rgba(255,255,255,.72);
+  max-width:440px;
+  margin-bottom:32px;
+  font-weight:300;
+  line-height:1.5;
+}
+.hero-cta{
+  display:inline-flex;align-items:center;gap:10px;
+  background:var(--acid);color:var(--ink);
+  font-size:14px;font-weight:500;
+  padding:14px 28px;border-radius:40px;
+  text-decoration:none;letter-spacing:.03em;
+  transition:transform .2s,box-shadow .2s;
+}
+.hero-cta:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(200,245,59,.4)}
+.hero-cta svg{width:18px;height:18px;transition:transform .2s}
+.hero-cta:hover svg{transform:translateX(4px)}
+.hero-stats{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:1px;background:rgba(255,255,255,.12);
+  border-radius:14px;overflow:hidden;
+  margin-top:32px;
+}
+.hero-stat{
+  background:rgba(255,255,255,.06);
+  padding:16px 12px;text-align:center;
+}
+.hero-stat-num{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:32px;color:var(--acid);
+  line-height:1;display:block;
+}
+.hero-stat-label{font-size:10px;color:rgba(255,255,255,.55);letter-spacing:.06em;text-transform:uppercase;margin-top:4px;display:block}
+
+/* ── SECTION HEADERS ── */
+.section-tag{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--teal);margin-bottom:12px;
+}
+.section-tag::before{content:'';width:20px;height:2px;background:var(--teal)}
+h2{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:clamp(36px,8vw,64px);
+  line-height:1;
+  letter-spacing:-.01em;
+  margin-bottom:16px;
+}
+.section-intro{
+  font-size:clamp(15px,2.5vw,18px);
+  color:var(--muted);
+  max-width:500px;
+  line-height:1.65;
+  margin-bottom:40px;
+  font-weight:300;
+}
+
+/* ── STAT CARDS ── */
+.stats-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+  margin-bottom:32px;
+}
+@media(min-width:520px){.stats-grid{grid-template-columns:repeat(3,1fr)}}
+.stat-card{
+  background:var(--card);
+  border-radius:var(--r);
+  padding:20px 16px;
+  border:1px solid var(--border);
+  position:relative;overflow:hidden;
+}
+.stat-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+}
+.stat-card.green::before{background:var(--teal)}
+.stat-card.acid::before{background:var(--acid)}
+.stat-card.dark::before{background:var(--ink)}
+.stat-num{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:42px;line-height:1;
+  color:var(--ink);display:block;
+}
+.stat-unit{font-size:18px;color:var(--muted)}
+.stat-label{font-size:12px;color:var(--muted);margin-top:4px;line-height:1.4}
+
+/* ── PRIORITY STACK ── */
+.stack-intro{
+  background:var(--deep);
+  color:var(--white);
+  border-radius:20px;
+  padding:28px 24px;
+  margin-bottom:32px;
+}
+.stack-intro h3{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:32px;color:var(--acid);margin-bottom:8px
+}
+.stack-intro p{font-size:14px;color:rgba(255,255,255,.7);line-height:1.6}
+.stack-item{
+  display:flex;align-items:flex-start;gap:16px;
+  padding:16px 0;
+  border-bottom:1px solid var(--border);
+}
+.stack-item:last-child{border-bottom:none}
+.stack-num{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:36px;line-height:1;
+  color:var(--acid);min-width:36px;
+  flex-shrink:0;
+}
+.stack-body{}
+.stack-name{font-size:16px;font-weight:500;margin-bottom:2px}
+.stack-desc{font-size:13px;color:var(--muted);line-height:1.5}
+.stack-badge{
+  display:inline-flex;font-size:10px;font-weight:500;
+  padding:3px 8px;border-radius:12px;letter-spacing:.04em;
+  text-transform:uppercase;margin-top:6px;
+}
+.badge-high{background:#dcfce7;color:#166534}
+.badge-med{background:#dbeafe;color:#1e40af}
+.badge-prom{background:#fef9c3;color:#854d0e}
+
+/* ── LIFESTYLE CARDS ── */
+.lifestyle-grid{display:flex;flex-direction:column;gap:16px;margin-bottom:32px}
+.ls-card{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:20px;overflow:hidden;
+}
+.ls-img{width:100%;height:180px;object-fit:cover;display:block}
+.ls-body{padding:20px}
+.ls-rank{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:13px;color:var(--teal);letter-spacing:.08em;
+  text-transform:uppercase;margin-bottom:6px;display:block;
+}
+.ls-title{font-size:20px;font-weight:500;margin-bottom:8px}
+.ls-text{font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:12px}
+.ls-stat{
+  display:inline-flex;align-items:center;gap:6px;
+  background:var(--sky);color:var(--deep);
+  font-size:12px;font-weight:500;padding:6px 12px;border-radius:12px;
+}
+.ls-stat strong{font-family:'Bebas Neue',sans-serif;font-size:18px}
+
+/* ── DIET SECTION ── */
+.diet-cards{display:flex;flex-direction:column;gap:12px}
+.diet-card{
+  background:var(--card);border:1px solid var(--border);border-radius:var(--r);
+  padding:20px;display:flex;align-items:flex-start;gap:16px;
+}
+.diet-icon{
+  width:48px;height:48px;border-radius:12px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:22px;flex-shrink:0;
+}
+.diet-icon.g{background:#e8f5e9}
+.diet-icon.b{background:#e3f2fd}
+.diet-icon.y{background:#fff8e1}
+.diet-rank-label{font-size:11px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;margin-bottom:4px}
+.diet-name{font-size:16px;font-weight:500;margin-bottom:4px}
+.diet-text{font-size:13px;color:var(--muted);line-height:1.55}
+.diet-action{
+  margin-top:10px;font-size:12px;font-weight:500;
+  color:var(--teal);display:flex;align-items:center;gap:4px;
+}
+
+/* ── SUPPS ── */
+.supp-list{display:flex;flex-direction:column;gap:0}
+.supp-item{
+  padding:16px 0;border-bottom:1px solid var(--border);
+  display:flex;gap:12px;align-items:flex-start;
+  cursor:pointer;
+}
+.supp-item:last-child{border-bottom:none}
+.supp-num{
+  font-family:'Bebas Neue',sans-serif;font-size:22px;
+  color:var(--muted);min-width:28px;flex-shrink:0;line-height:1.2;
+}
+.supp-main{flex:1}
+.supp-name{font-size:15px;font-weight:500;margin-bottom:2px}
+.supp-teaser{font-size:13px;color:var(--muted);line-height:1.5}
+.supp-detail{
+  font-size:13px;color:var(--ink);line-height:1.65;
+  margin-top:10px;padding:14px;background:var(--sky);
+  border-radius:10px;display:none;
+}
+.supp-detail.open{display:block}
+.supp-detail strong{color:var(--deep)}
+.supp-chevron{
+  color:var(--muted);font-size:18px;
+  margin-top:2px;flex-shrink:0;
+  transition:transform .2s;
+}
+.supp-item.open .supp-chevron{transform:rotate(180deg)}
+.supp-dose{
+  display:inline-flex;align-items:center;gap:5px;
+  background:var(--deep);color:var(--acid);
+  font-size:11px;font-weight:500;padding:4px 10px;
+  border-radius:10px;margin-top:8px;
+}
+
+/* ── BIOMARKERS ── */
+.bm-table{width:100%;border-collapse:collapse}
+.bm-table th{
+  font-size:10px;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--muted);text-align:left;padding:10px 8px;
+  border-bottom:2px solid var(--border);
+}
+.bm-table td{
+  padding:12px 8px;font-size:13px;
+  border-bottom:1px solid var(--border);vertical-align:top;
+}
+.bm-table tr:last-child td{border-bottom:none}
+.bm-name{font-weight:500;margin-bottom:2px}
+.bm-desc{font-size:11px;color:var(--muted);line-height:1.4}
+.bm-cadence{
+  font-size:11px;background:var(--sky);
+  color:var(--deep);padding:3px 7px;border-radius:8px;
+  white-space:nowrap;
+}
+.bm-target{
+  font-size:12px;color:var(--teal);font-weight:500
+}
+@media(max-width:460px){
+  .bm-table th:nth-child(3),.bm-table td:nth-child(3){display:none}
+}
+
+/* ── TOXIN SECTION ── */
+.toxin-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+@media(min-width:520px){.toxin-cards{grid-template-columns:repeat(2,1fr)}}
+.txn-card{
+  background:var(--deep);color:var(--white);
+  border-radius:var(--r);padding:18px 14px;
+}
+.txn-icon{font-size:24px;margin-bottom:8px;display:block}
+.txn-name{font-size:13px;font-weight:500;margin-bottom:4px;color:var(--acid)}
+.txn-text{font-size:12px;color:rgba(255,255,255,.65);line-height:1.5}
+
+/* ── TRUTH BOX ── */
+.truth-box{
+  background:var(--ink);color:var(--white);
+  border-radius:20px;padding:32px 24px;
+  margin:32px 0;
+  position:relative;overflow:hidden;
+}
+.truth-box::after{
+  content:'"';
+  position:absolute;right:20px;top:-10px;
+  font-family:'DM Serif Display',serif;
+  font-size:160px;color:rgba(200,245,59,.08);
+  line-height:1;pointer-events:none;
+}
+.truth-box blockquote{
+  font-family:'DM Serif Display',serif;
+  font-size:clamp(18px,4vw,24px);
+  line-height:1.45;color:var(--white);
+  font-style:italic;
+  position:relative;z-index:1;
+}
+.truth-box cite{
+  display:block;margin-top:16px;
+  font-size:12px;color:var(--acid);
+  font-style:normal;letter-spacing:.06em;text-transform:uppercase;
+}
+
+/* ── FOOTER ── */
+footer{
+  background:var(--ink);color:rgba(255,255,255,.45);
+  text-align:center;padding:40px 20px;
+  font-size:12px;line-height:1.7;
+}
+footer strong{color:var(--acid)}
+
+/* ── ANIMATIONS ── */
+.reveal{
+  opacity:0;transform:translateY(28px);
+  transition:opacity .6s ease,transform .6s ease;
+}
+.reveal.visible{opacity:1;transform:none}
+
+.count{display:inline}
+
+/* ── ALT BG SECTIONS ── */
+.bg-dark{background:var(--ink);color:var(--white)}
+.bg-dark .section-intro,.bg-dark .stack-desc,.bg-dark .diet-text{color:rgba(255,255,255,.6)}
+.bg-dark .stat-card{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.1)}
+.bg-dark .stat-num,.bg-dark h2{color:var(--white)}
+.bg-dark .stat-label{color:rgba(255,255,255,.5)}
+.bg-dark .supp-item{border-color:rgba(255,255,255,.1)}
+.bg-dark .supp-name{color:var(--white)}
+.bg-dark .supp-teaser{color:rgba(255,255,255,.55)}
+.bg-dark .supp-num{color:rgba(255,255,255,.3)}
+.bg-dark .supp-chevron{color:rgba(255,255,255,.4)}
+.bg-dark .supp-item.open .supp-detail{background:rgba(255,255,255,.06);color:rgba(255,255,255,.8)}
+.bg-dark .section-tag{color:var(--acid)}
+.bg-dark .section-tag::before{background:var(--acid)}
+
+/* ── CHART BARS ── */
+.bar-chart{margin:24px 0}
+.bar-row{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.bar-label{font-size:12px;color:var(--muted);min-width:100px;flex-shrink:0;text-align:right}
+.bar-track{flex:1;background:rgba(0,0,0,.06);border-radius:4px;height:26px;overflow:hidden}
+.bar-fill{height:100%;border-radius:4px;display:flex;align-items:center;padding-left:10px;
+  font-size:11px;font-weight:500;color:var(--white);width:0%;transition:width 1.2s cubic-bezier(.4,0,.2,1)}
+.bar-fill.teal{background:var(--teal)}
+.bar-fill.acid{background:#6b8f0b;color:var(--white)}
+.bar-fill.dark{background:var(--ink)}
+.bar-fill.mid{background:#2d7a65}
+.bg-dark .bar-track{background:rgba(255,255,255,.08)}
+.bg-dark .bar-label{color:rgba(255,255,255,.55)}
+
+/* ── PHASE STEPS ── */
+.phase-steps{counter-reset:phase;margin:20px 0}
+.phase-step{
+  display:flex;gap:16px;padding:16px 0;
+  border-bottom:1px solid var(--border);align-items:flex-start;
+}
+.phase-step:last-child{border:none}
+.phase-step::before{
+  counter-increment:phase;
+  content:counter(phase);
+  font-family:'Bebas Neue',sans-serif;
+  font-size:40px;line-height:1;
+  color:var(--acid);min-width:32px;
+  flex-shrink:0;
+}
+.phase-title{font-size:15px;font-weight:500;margin-bottom:4px}
+.phase-desc{font-size:13px;color:var(--muted);line-height:1.55}
+.bg-dark .phase-step{border-color:rgba(255,255,255,.1)}
+.bg-dark .phase-title{color:var(--white)}
+.bg-dark .phase-desc{color:rgba(255,255,255,.55)}
+
+/* ── SCROLL INDICATOR ── */
+.scroll-indicator{
+  position:absolute;bottom:28px;left:50%;transform:translateX(-50%);
+  display:flex;flex-direction:column;align-items:center;gap:6px;
+  color:rgba(255,255,255,.5);font-size:10px;letter-spacing:.1em;
+  text-transform:uppercase;z-index:2;animation:bob 2s ease-in-out infinite;
+}
+.scroll-indicator svg{width:18px;height:18px}
+@keyframes bob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(6px)}}
+</style>
+</head>
+<body>
+
+<div id="prog"></div>
+
+<nav>
+  <a href="#hero" class="nav-logo">OUTLIVE</a>
+  <div class="nav-links">
+    <a href="#the-math">Math</a>
+    <a href="#lifestyle">Move</a>
+    <a href="#supplements">Stack</a>
+    <a href="#track">Track</a>
+  </div>
+</nav>
+
+<!-- ───── HERO ───── -->
+<section id="hero">
+  <div class="hero-img"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow"><span></span>Based on 200+ studies · 7-model AI review</div>
+    <h1>DEATH<br><em>DOESN'T</em><br>STAND A<br>CHANCE</h1>
+    <p class="hero-sub">The no-BS longevity protocol. What actually works. What's expensive noise. And why most men leave 15+ years on the table.</p>
+    <a href="#the-math" class="hero-cta">
+      See the math
+      <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10h12M10 4l6 6-6 6"/></svg>
+    </a>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <span class="hero-stat-num" data-count="5">0</span>
+        <span class="hero-stat-label">×&nbsp;lower mortality, top VO2max vs bottom</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-num" data-count="66">0</span>
+        <span class="hero-stat-label">%&nbsp;less Alzheimer's with sauna 4×/wk</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-num" data-count="15">0</span>
+        <span class="hero-stat-label">+&nbsp;years most men forfeit doing nothing</span>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-indicator">
+    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 4v12M4 10l6 6 6-6"/></svg>
+    scroll
+  </div>
+</section>
+
+<!-- ───── THE MATH ───── -->
+<section id="the-math" class="reveal">
+  <div class="section-tag">The math</div>
+  <h2>WHAT THE<br>DATA SAYS</h2>
+  <p class="section-intro">Seven AI models ran adversarial reviews of 200+ studies. Here's where the signal is real vs. where it's supplement industry noise.</p>
+
+  <div class="stats-grid">
+    <div class="stat-card green">
+      <span class="stat-num"><span class="count" data-count="750">0</span><span class="stat-unit">k</span></span>
+      <div class="stat-label">Patients in the study linking VO2max to mortality. 5× difference between best and worst fitness. Dwarfs every supplement ever tested.</div>
+    </div>
+    <div class="stat-card acid">
+      <span class="stat-num"><span class="count" data-count="40">0</span><span class="stat-unit">%</span></span>
+      <div class="stat-label">Reduction in cardiovascular death with 4–7 sauna sessions per week. Finnish cohort, 20-year follow-up.</div>
+    </div>
+    <div class="stat-card dark">
+      <span class="stat-num"><span class="count" data-count="2">0</span><span class="stat-unit">.5yr</span></span>
+      <div class="stat-label">Biological age reversed by FMD cycles in a Nature Communications RCT. Diet literally turned back the clock.</div>
+    </div>
+    <div class="stat-card green">
+      <span class="stat-num"><span class="count" data-count="68">0</span><span class="stat-unit">%</span></span>
+      <div class="stat-label">Of US adults are magnesium deficient. It's a cofactor in 300+ reactions including DNA repair. And it's $12.</div>
+    </div>
+    <div class="stat-card acid">
+      <span class="stat-num"><span class="count" data-count="24">0</span><span class="stat-unit">%</span></span>
+      <div class="stat-label">Lifespan extension in mice from GlyNAC. The human RCT data reversed multiple aging hallmarks simultaneously.</div>
+    </div>
+    <div class="stat-card dark">
+      <span class="stat-num"><span class="count" data-count="80">0</span><span class="stat-unit">%</span></span>
+      <div class="stat-label">Drop in taurine from youth to old age. You're running low on one of your most important longevity molecules. Costs cents to fix.</div>
+    </div>
+  </div>
+
+  <div class="truth-box reveal">
+    <blockquote>"If VO2max is in the bottom two quintiles, no supplement stack is going to compensate. The lifestyle interventions aren't additive with the supplements — they're the prerequisite."</blockquote>
+    <cite>7-Model AI Adversarial Review · 2024</cite>
+  </div>
+
+  <div class="bar-chart reveal" id="effect-chart">
+    <div class="section-tag" style="margin-bottom:16px">Mortality impact — relative effect size comparison</div>
+    <div class="bar-row">
+      <div class="bar-label">VO2max (top vs bottom)</div>
+      <div class="bar-track"><div class="bar-fill teal" data-width="100">5× mortality difference</div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">Zone 2 cardio</div>
+      <div class="bar-track"><div class="bar-fill teal" data-width="90">mitochondrial biogenesis</div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">Sauna 4–7×/wk</div>
+      <div class="bar-track"><div class="bar-fill mid" data-width="78">40% CV death reduction</div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">Mediterranean diet</div>
+      <div class="bar-track"><div class="bar-fill mid" data-width="65">telomere + mortality data</div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">GlyNAC supplement</div>
+      <div class="bar-track"><div class="bar-fill dark" data-width="48">human RCT hallmarks</div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">NMN/NR (popular)</div>
+      <div class="bar-track"><div class="bar-fill dark" data-width="22">overhyped, mixed results</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ───── LIFESTYLE ───── -->
+<section id="lifestyle" class="bg-dark reveal">
+  <div class="section-tag">Protocol #1</div>
+  <h2>MOVE<br>SWEAT<br>SLEEP</h2>
+  <p class="section-intro">Three lifestyle interventions that beat every supplement combined. No gear required. No subscription. Just science.</p>
+
+  <div class="lifestyle-grid">
+    <div class="ls-card reveal">
+      <img class="ls-img" src="https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=800&q=80&auto=format&fit=crop" onerror="this.style.background='linear-gradient(135deg,#1a3a2a,#0d3d33)';this.src=''" alt="Man running a trail in early morning light" loading="lazy">
+      <div class="ls-body">
+        <span class="ls-rank">Lifestyle #1 · Non-negotiable</span>
+        <div class="ls-title">Zone 2 Cardio</div>
+        <p class="ls-text">Exercise at a pace where you can talk but don't want to. This specific zone triggers the biggest mitochondrial response. Think brisk hike, easy jog, bike. Not HIIT. Not strolling. That 70–75% heart rate zone is where your cells literally grow new power plants.</p>
+        <p class="ls-text" style="margin-top:10px"><strong style="color:#c8f53b">The protocol:</strong> 4 sessions per week. 45–60 minutes each. That's it. Do this for 6 months and retest your resting heart rate and energy levels — you won't recognize them.</p>
+        <div class="ls-stat"><strong>5×</strong>&nbsp;lower all-cause mortality, top vs bottom fitness quintile</div>
+      </div>
+    </div>
+
+    <div class="ls-card reveal">
+      <img class="ls-img" src="https://images.unsplash.com/photo-1583244685026-d8519b5e3d21?w=800&q=80&auto=format&fit=crop" onerror="this.style.background='linear-gradient(135deg,#3a1a0d,#5c2a15)';this.src=''" alt="Man in sauna with steam, relaxed and focused" loading="lazy">
+      <div class="ls-body">
+        <span class="ls-rank">Lifestyle #2 · Underrated killer app</span>
+        <div class="ls-title">Finnish Sauna Protocol</div>
+        <p class="ls-text">A 20-year Finnish study tracked 2,000 men. Those who used the sauna 4–7 times per week had a 40% lower risk of dying from heart disease and — this is the part that should make you sit up — a 66% lower risk of Alzheimer's. Sixty-six percent. No drug does that.</p>
+        <p class="ls-text" style="margin-top:10px"><strong style="color:#1a8c73">The protocol:</strong> 80–100°C (176–212°F) for 15–20 minutes. Real dry sauna, not the lukewarm steam room at your gym. 4× per week minimum.</p>
+        <div class="ls-stat"><strong>66%</strong>&nbsp;reduced Alzheimer's risk · 4–7×/week</div>
+      </div>
+    </div>
+
+    <div class="ls-card reveal">
+      <img class="ls-img" src="https://images.unsplash.com/photo-1531353826977-0941b4779a1c?w=800&q=80&auto=format&fit=crop" onerror="this.style.background='linear-gradient(135deg,#0d1a3a,#1a2a5c)';this.src=''" alt="Man sleeping deeply in a dark cool bedroom" loading="lazy">
+      <div class="ls-body">
+        <span class="ls-rank">Lifestyle #3 · The forgotten one</span>
+        <div class="ls-title">Deep Sleep Architecture</div>
+        <p class="ls-text">Your brain has a sewage system. It only runs during deep sleep. While you're out, cerebrospinal fluid floods your brain and flushes out amyloid-beta — the protein that builds up into Alzheimer's plaques. One bad night measurably increases plaque accumulation. This isn't metaphor. It's plumbing.</p>
+        <p class="ls-text" style="margin-top:10px"><strong style="color:#1a8c73">The protocol:</strong> Room temp 65–68°F. Zero alcohol within 3 hours of bed (one drink suppresses deep sleep 20–30%). Same wake time daily. Add magnesium glycinate at night.</p>
+        <div class="ls-stat"><strong>50%</strong>&nbsp;less deep sleep at 65 vs 25 — but this is reversible</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───── DIET ───── -->
+<section id="diet" class="reveal">
+  <div class="section-tag">Protocol #2</div>
+  <h2>EAT LIKE<br>YOU WANT<br>TO LIVE</h2>
+  <p class="section-intro">Three dietary approaches with actual human data behind them. Not trends. Not elimination cults. Frameworks that move epigenetic clocks.</p>
+
+  <div class="diet-cards">
+    <div class="diet-card reveal">
+      <div class="diet-icon g">🫒</div>
+      <div>
+        <div class="diet-rank-label">Rank #1 · Strongest human evidence</div>
+        <div class="diet-name">Mediterranean-Plus (real version)</div>
+        <p class="diet-text">Not pasta and wine. The actual signal: high-polyphenol extra-virgin olive oil (>300mg/kg — most US brands don't qualify), wild fish, nuts, tons of vegetables, zero ultra-processed food. The PREDIMED trial: 7,447 people, 30% fewer heart attacks. Telomere data: longer telomeres in highest-adherence group. Warning: 70% of "EVOO" in US stores is diluted with cheaper seed oils. Source matters.</p>
+        <div class="diet-action">→ Action: Replace all cooking oils with quality EVOO. Test it: real stuff is slightly cloudy and burns your throat.</div>
+      </div>
+    </div>
+    <div class="diet-card reveal">
+      <div class="diet-icon b">⏱️</div>
+      <div>
+        <div class="diet-rank-label">Rank #2 · Epigenetic clock mover</div>
+        <div class="diet-name">Fasting-Mimicking Diet Cycles</div>
+        <p class="diet-text">5 days per month: ~800–1,100 calories, mostly plant-based, low protein, low carb. This tricks your cells into thinking they're fasting. mTOR shuts down. Autophagy kicks in. Your body starts cleaning house — killing damaged cells, recycling broken parts. After 3 monthly cycles in a clinical trial: median 2.5-year biological age reduction on epigenetic clocks. That's not a supplement. That's time travel.</p>
+        <div class="diet-action">→ Action: Try one FMD cycle. Apps like Zero + meal prep make this manageable.</div>
+      </div>
+    </div>
+    <div class="diet-card reveal">
+      <div class="diet-icon y">🔄</div>
+      <div>
+        <div class="diet-rank-label">Rank #3 · Circadian + epigenetic</div>
+        <div class="diet-name">Time-Restricted Eating + Ketosis</div>
+        <p class="diet-text">Eat within a 6–10 hour window, aligned with daylight. The mechanism isn't just calories — it resets your cellular clocks. Add light ketosis (cut refined carbs, increase olive oil and avocado) and you get beta-hydroxybutyrate, a signaling molecule that literally reprograms which genes get turned on. It directly activates FOXO3a — the "longevity gene" found in centenarians worldwide.</p>
+        <div class="diet-action">→ Action: Stop eating by 7–8pm. First meal at 10am–noon. Try it for 3 weeks.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="truth-box reveal" style="margin-top:32px">
+    <blockquote>"The diet is not support infrastructure for the supplements. The supplements are amplifiers of the diet. Get this order wrong and you're pouring water into a leaking boat."</blockquote>
+    <cite>Phase 3 Synthesis · Adversarial AI Review</cite>
+  </div>
+</section>
+
+<!-- ───── SUPPLEMENTS ───── -->
+<section id="supplements" class="bg-dark reveal">
+  <div class="section-tag">Protocol #3</div>
+  <h2>THE REAL<br>STACK</h2>
+  <p class="section-intro">10 compounds that survived adversarial review across 7 AI models. Ranked by actual human evidence, not supplement industry hype. Tap each to expand.</p>
+
+  <div class="stack-intro">
+    <h3>First, the honest truth</h3>
+    <p>Resveratrol? Debunked. Most NMN products? Degraded in the bottle. The supplement market runs on your fear of death. This list is what survives when you strip the hype. GlyNAC is $30 at any health food store and has better human trial data than compounds marketed at $200/month.</p>
+  </div>
+
+  <div class="supp-list">
+    <div class="supp-item" onclick="toggleSupp(this)">
+      <div class="supp-num">01</div>
+      <div class="supp-main">
+        <div class="supp-name">GlyNAC (Glycine + N-Acetylcysteine)</div>
+        <div class="supp-teaser">Reverses more aging hallmarks simultaneously than anything else with human RCT data. Baylor University. Multiple trials.</div>
+        <div class="supp-detail">
+          <strong>What it does:</strong> Restores your body's master antioxidant (glutathione), which drops sharply with age. Without it, your mitochondria drown in their own exhaust. The Baylor RCT corrected mitochondrial dysfunction, oxidative stress, inflammation, insulin resistance, endothelial dysfunction, and cognitive decline — simultaneously — in 24 weeks.<br><br>
+          <strong>Why mainstream doesn't know it:</strong> It's two cheap amino acids. There's no $80/month product to market. No celebrity endorsement. Just science.<br><br>
+          <div class="supp-dose">Dose: 8–10g Glycine + 600–1200mg NAC daily</div>
+          <span class="stack-badge badge-high">9/10 confidence</span>
+        </div>
+      </div>
+      <div class="supp-chevron">↓</div>
+    </div>
+
+    <div class="supp-item" onclick="toggleSupp(this)">
+      <div class="supp-num">02</div>
+      <div class="supp-main">
+        <div class="supp-name">Urolithin A</div>
+        <div class="supp-teaser">Phase 2 RCT data. Cleans out your broken mitochondria through a process called mitophagy. Only 40% of people produce it naturally.</div>
+        <div class="supp-detail">
+          <strong>What it does:</strong> Activates mitophagy — the selective garbage collection of broken mitochondria. Your cells accumulate dysfunctional power plants over decades. Urolithin A triggers the cleanup crew. Phase 2 RCT (Timeline Biosciences, 2022): direct improvement in mitochondrial function in human muscle tissue.<br><br>
+          <strong>The catch:</strong> You're supposed to produce this from pomegranates via gut bacteria. But ~60% of people don't have the right gut bacteria to do the conversion. Supplementing bypasses the broken factory.<br><br>
+          <div class="supp-dose">Dose: 500–1000mg/day (Mitopure brand has the trial data)</div>
+          <span class="stack-badge badge-high">8/10 confidence</span>
+        </div>
+      </div>
+      <div class="supp-chevron">↓</div>
+    </div>
+
+    <div class="supp-item" onclick="toggleSupp(this)">
+      <div class="supp-num">03</div>
+      <div class="supp-main">
+        <div class="supp-name">Magnesium Glycinate or Threonate</div>
+        <div class="supp-teaser">68% of US men are deficient. Cofactor in DNA repair, ATP production, and telomere maintenance. Costs $12.</div>
+        <div class="supp-detail">
+          <strong>What it does:</strong> Magnesium is involved in over 300 enzymatic reactions — including the enzymes that repair your DNA after damage, produce ATP (your cellular fuel), and maintain telomere length. Being deficient is like running a factory with half the machines broken.<br><br>
+          <strong>Form matters:</strong> Magnesium oxide (most cheap supplements) is barely absorbed. Glycinate form: best sleep and muscle benefits. Threonate: crosses the blood-brain barrier, specifically relevant for cognitive aging.<br><br>
+          <div class="supp-dose">Dose: 300–400mg elemental magnesium nightly</div>
+          <span class="stack-badge badge-high">9/10 confidence — foundational</span>
+        </div>
+      </div>
+      <div class="supp-chevron">↓</div>
+    </div>
+
+    <div class="supp-item" onclick="toggleSupp(this)">
+      <div class="supp-num">04</div>
+      <div class="supp-main">
+        <div class="supp-name">Omega-3 EPA/DHA (Triglyceride Form)</div>
+        <div class="supp-teaser">Slows telomere shortening. Actively resolves inflammation rather than blocking it. But most fish oil in stores is already rancid.</div>
+        <div class="supp-detail">
+          <strong>What it does:</strong> EPA and DHA build the active "resolution" molecules (resolvins, protectins) that terminate inflammation. Not the same as blocking it — that's like stopping a flood vs. bailing the water out. JAMA 2010 study: highest DHA quartile had the slowest telomere shortening over 5 years. Direct biological aging measurement.<br><br>
+          <strong>Critical warning:</strong> Oxidized fish oil is pro-inflammatory. The supplement market is full of rancid product. Check TOTOX value (under 26). Only buy triglyceride or re-esterified TG form. The cheap ethyl ester form is ~50% less bioavailable.<br><br>
+          <div class="supp-dose">Dose: 2–4g EPA+DHA/day with a fatty meal</div>
+          <span class="stack-badge badge-high">9/10 confidence</span>
+        </div>
+      </div>
+      <div class="supp-chevron">↓</div>
+    </div>
+
+    <div class="supp-item" onclick="toggleSupp(this)">
+      <div class="supp-num">05</div>
+      <div class="supp-main">
+        <div class="supp-name">Taurine</div>
+        <div class="supp-teaser">June 2023 Science paper shocked the field. Declines 80% from youth to old age. Costs cents per day to replace.</div>
+        <div class="supp-detail">
+          <strong>What it does:</strong> A 2023 study in Science (the top scientific journal) showed taurine supplementation extended lifespan 10–12% in mice and macaques, and corrected multiple aging hallmarks. In humans, higher blood taurine correlated with lower biological age markers. Mechanisms: stabilizes mitochondrial membranes, suppresses cellular senescence, improves microbiome diversity.<br><br>
+          <strong>Why you've heard of it from energy drinks:</strong> Red Bull uses it as a cheap filler. That's like knowing about penicillin only from your antibiotic gummy vitamins. The compound is serious.<br><br>
+          <div class="supp-dose">Dose: 2–4g/day. Pure powder is cheapest.</div>
+          <span class="stack-badge badge-med">7.5/10 confidence — strong animal data, growing human</span>
+        </div>
+      </div>
+      <div class="supp-chevron">↓</div>
+    </div>
+
+    <div class="supp-item" onclick="toggleSupp(this)">
+      <div class="supp-num">06</div>
+      <div class="supp-main">
+        <div class="supp-name">Vitamin D3 + K2 MK-7 (always together)</div>
+        <div class="supp-teaser">D3 regulates 1,000+ genes including telomerase. K2 prevents the calcium from calcifying your arteries. Don't take one without the other.</div>
+        <div class="supp-detail">
+          <strong>Why together:</strong> Vitamin D3 ramps up calcium-regulating proteins that require K2 to function. D3 without K2 can theoretically drive calcium into arteries instead of bones. Not theoretical — it shows up in arterial stiffness studies.<br><br>
+          <strong>What D3 does:</strong> The Vitamin D receptor is a transcription factor that governs ~1,000 genes, including hTERT (the enzyme that maintains your telomeres). Most people need 5,000–8,000 IU to reach therapeutic blood levels. The government "safe limit" of 4,000 IU is extremely conservative and not based on toxicity data. Test your blood — target 50–70 ng/mL.<br><br>
+          <div class="supp-dose">Dose: 5,000–8,000 IU D3 + 200mcg K2 MK-7 daily. Test twice/year.</div>
+          <span class="stack-badge badge-high">8.5/10 confidence</span>
+        </div>
+      </div>
+      <div class="supp-chevron">↓</div>
+    </div>
+
+    <div class="supp-item" onclick="toggleSupp(this)">
+      <div class="supp-num">07</div>
+      <div class="supp-main">
+        <div class="supp-name">Creatine Monohydrate</div>
+        <div class="supp-teaser">Most studied supplement in existence. Everyone thinks it's for gym bros. It's actually one of the most validated neuroprotective compounds we have.</div>
+        <div class="supp-detail">
+          <strong>What it does for longevity:</strong> Creatine recycles ADP back to ATP — the energy currency every cell runs on. In aging brains and hearts, energy metabolism starts failing. Creatine stabilizes this. Hundreds of RCTs in older adults show it preserves muscle mass and functional performance. Brain data is emerging: neuroprotective, cognitive support under stress.<br><br>
+          <strong>The overlooked angle:</strong> Sarcopenia (muscle loss with age) is directly linked to mitochondrial density decline. They're the same problem from different angles. Creatine is a cheap, safe amplifier of resistance training's muscle-preserving effects.<br><br>
+          <div class="supp-dose">Dose: 3–5g/day. No loading phase needed. Cheapest form works.</div>
+          <span class="stack-badge badge-high">9/10 confidence for muscle; 7/10 for neuro</span>
+        </div>
+      </div>
+      <div class="supp-chevron">↓</div>
+    </div>
+
+    <div class="supp-item" onclick="toggleSupp(this)">
+      <div class="supp-num">08</div>
+      <div class="supp-main">
+        <div class="supp-name">Spermidine (with a big caveat)</div>
+        <div class="supp-teaser">20-year European study: highest dietary intake = 5 extra years of life. The caveat: most supplements contain near-zero actual spermidine. Test or don't bother.</div>
+        <div class="supp-detail">
+          <strong>What it does:</strong> Induces autophagy through a completely different pathway than fasting — meaning it works even in a fed state. The Kiechl cohort (European Heart Journal, 2018) found the highest quartile of dietary spermidine intake associated with 5+ additional years of life expectancy over 20 years. Japanese natto consumption (fermented soybean, richest dietary source) tracks with Japanese longevity data.<br><br>
+          <strong>The fraud problem:</strong> Independent lab testing of "wheat germ extract" supplements finds most contain virtually undetectable spermidine levels. Demand a third-party COA with quantified spermidine content. Without that verification, you're buying expensive starch.<br><br>
+          <div class="supp-dose">Dose: 1–10mg/day verified. Or just eat natto.</div>
+          <span class="stack-badge badge-med">7/10 confidence — verify your source</span>
+        </div>
+      </div>
+      <div class="supp-chevron">↓</div>
+    </div>
+
+    <div class="supp-item" onclick="toggleSupp(this)">
+      <div class="supp-num">09</div>
+      <div class="supp-main">
+        <div class="supp-name">Astaxanthin (natural only)</div>
+        <div class="supp-teaser">The most powerful antioxidant known. 6,000× stronger than Vitamin C. Spans the entire cell membrane — inside and outside. Synthetic version doesn't work.</div>
+        <div class="supp-detail">
+          <strong>What it does:</strong> Most antioxidants work in either the water-based or fat-based parts of your cells. Astaxanthin spans the entire lipid bilayer — protecting mitochondrial membranes from both inside and outside simultaneously. Reduces 8-OHdG (the most validated marker of DNA oxidative damage) in human studies.<br><br>
+          <strong>The sourcing is everything:</strong> Synthetic astaxanthin has the wrong molecular structure (S,S configuration vs. natural 3S,3'S). Studies with synthetic versions consistently show weaker effects. Look for "Haematococcus pluvialis" on the label — that's the algae source. Take with fat or absorption tanks.<br><br>
+          <div class="supp-dose">Dose: 8–12mg/day with a fatty meal. H. pluvialis source only.</div>
+          <span class="stack-badge badge-med">7/10 confidence</span>
+        </div>
+      </div>
+      <div class="supp-chevron">↓</div>
+    </div>
+
+    <div class="supp-item" onclick="toggleSupp(this)">
+      <div class="supp-num">10</div>
+      <div class="supp-main">
+        <div class="supp-name">Microdose Lithium (1–5mg, not psychiatric dose)</div>
+        <div class="supp-teaser">The most ignored compound in longevity. Japanese towns with lithium in their water have 17% longer life expectancy. It's stigmatized by association with psychiatric dosing that's 300× higher.</div>
+        <div class="supp-detail">
+          <strong>What it does:</strong> At low doses, lithium inhibits GSK-3β — an enzyme that becomes overactive with age and drives tau protein buildup (Alzheimer's pathology). It also activates autophagy and elevates BDNF (your brain's growth hormone). Multiple cross-national studies show water supply lithium levels correlate with lower dementia rates, lower all-cause mortality. This association is geological — not socioeconomic — meaning it's hard to explain away as confound.<br><br>
+          <strong>Why no one talks about it:</strong> Pure stigma. Psychiatric lithium carbonate is dosed at 600–1,800mg for bipolar disorder. The supplemental dose here (1–5mg lithium orotate) is a completely different pharmacological profile. Get periodic basic metabolic panels if you supplement long-term.<br><br>
+          <div class="supp-dose">Dose: 1–5mg elemental lithium (as lithium orotate) daily</div>
+          <span class="stack-badge badge-med">7/10 neuro; 6/10 systemic longevity</span>
+        </div>
+      </div>
+      <div class="supp-chevron">↓</div>
+    </div>
+  </div>
+</section>
+
+<!-- ───── THE ENEMIES ───── -->
+<section id="enemies" class="reveal">
+  <div class="section-tag">What kills the protocol</div>
+  <h2>THE SILENT<br>SABOTEURS</h2>
+  <p class="section-intro">You can run the perfect stack and eat like a monk. These four things will still quietly accelerate your aging if you don't address them first.</p>
+
+  <div class="toxin-cards">
+    <div class="txn-card reveal">
+      <span class="txn-icon">☠️</span>
+      <div class="txn-name">Glyphosate</div>
+      <p class="txn-text">Found in 80%+ of US urine samples. Disrupts gut microbiome, chelates manganese (breaks mitochondrial antioxidants), damages DNA. Eating organic for the Dirty Dozen isn't optional.</p>
+    </div>
+    <div class="txn-card reveal">
+      <span class="txn-icon">🛢️</span>
+      <div class="txn-name">Seed Oils</div>
+      <p class="txn-text">Linoleic acid accumulates in cell membranes. Oxidizes. Generates aldehydes that directly damage your mitochondrial electron transport chain. Full turnover takes 2 years. Start now.</p>
+    </div>
+    <div class="txn-card reveal">
+      <span class="txn-icon">🧴</span>
+      <div class="txn-name">PFAS / Forever Chemicals</div>
+      <p class="txn-text">In virtually every American's blood. Impair thyroid function, liver detox, and immune response. Non-stick cookware, food packaging, water. Filter your water. Ditch Teflon.</p>
+    </div>
+    <div class="txn-card reveal">
+      <span class="txn-icon">🧬</span>
+      <div class="txn-name">Microplastics</div>
+      <p class="txn-text">NEJM 2024: found in arterial plaques. Higher burden = 4.5× more cardiovascular events. They're in your blood, your organs, your brain. Avoid plastic food contact. Filter water.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ───── THE ORDER ───── -->
+<section id="order" class="bg-dark reveal">
+  <div class="section-tag">The hierarchy</div>
+  <h2>DO THIS<br>IN ORDER</h2>
+  <p class="section-intro">The biggest mistake in the longevity space: adding supplements before fixing the foundation. The order of operations matters more than the ingredient list.</p>
+
+  <div class="phase-steps">
+    <div class="phase-step reveal">
+      <div>
+        <div class="phase-title">Remove the daily mitochondrial insults</div>
+        <p class="phase-desc">Organic produce for high-pesticide items. Water filter (solid-block carbon or RO). Eliminate seed oils — replace with olive oil and animal fats. Ditch non-stick cookware. This is the foundation. Nothing else works optimally on top of daily chemical damage.</p>
+      </div>
+    </div>
+    <div class="phase-step reveal">
+      <div>
+        <div class="phase-title">Build the aerobic base with Zone 2</div>
+        <p class="phase-desc">The 5× mortality differential from VO2max dwarfs every supplement combined. Four sessions per week, 45–60 minutes. This is non-negotiable. Build this first. Everything else amplifies it.</p>
+      </div>
+    </div>
+    <div class="phase-step reveal">
+      <div>
+        <div class="phase-title">Fix the dietary framework</div>
+        <p class="phase-desc">Mediterranean-plus quality, periodic fasting. These are the only interventions that have moved epigenetic clocks in human clinical trials. The diet is not support infrastructure for the supplements — it's the other way around.</p>
+      </div>
+    </div>
+    <div class="phase-step reveal">
+      <div>
+        <div class="phase-title">Add the evidence-backed short stack</div>
+        <p class="phase-desc">GlyNAC. Urolithin A. Magnesium glycinate. Quality omega-3. Creatine. Vitamin D3+K2. These have actual human data. Don't buy anything else until these are dialed in.</p>
+      </div>
+    </div>
+    <div class="phase-step reveal">
+      <div>
+        <div class="phase-title">Add sauna as a physiological intervention</div>
+        <p class="phase-desc">Treat it like a prescription. Four sessions per week at proper temperature. The 66% Alzheimer's risk reduction data is stronger than any pharmaceutical in prevention trials. It deserves that level of respect.</p>
+      </div>
+    </div>
+    <div class="phase-step reveal">
+      <div>
+        <div class="phase-title">Layer in taurine, spermidine, astaxanthin, lithium</div>
+        <p class="phase-desc">These are amplifiers on an already-functioning system. They're not foundations. If you're doing steps 1–5, adding these compounds to a working protocol produces compounding gains. Adding them to chaos produces expensive urine.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───── BIOMARKERS ───── -->
+<section id="track" class="reveal">
+  <div class="section-tag">Measure it</div>
+  <h2>TRUST<br>THE DATA,<br>NOT YOUR<br>FEELINGS</h2>
+  <p class="section-intro">Every intervention in this guide should move measurable markers. If nothing changes in 6 months, something's wrong with your inputs — not the science.</p>
+
+  <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 -20px;padding:0 20px">
+    <table class="bm-table" style="min-width:360px">
+      <thead>
+        <tr>
+          <th>Test</th>
+          <th>Target</th>
+          <th>Cadence</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><div class="bm-name">hs-CRP</div><div class="bm-desc">Tracks systemic inflammation — the engine of aging</div></td>
+          <td><div class="bm-target">Under 0.8 mg/L</div></td>
+          <td><div class="bm-cadence">Every 3–6 mo</div></td>
+        </tr>
+        <tr>
+          <td><div class="bm-name">Fasting Insulin + HOMA-IR</div><div class="bm-desc">Detects insulin resistance years before glucose rises</div></td>
+          <td><div class="bm-target">Insulin &lt;5 µIU/mL</div></td>
+          <td><div class="bm-cadence">Every 3–6 mo</div></td>
+        </tr>
+        <tr>
+          <td><div class="bm-name">HbA1c</div><div class="bm-desc">90-day average blood sugar — glycation rate of your proteins</div></td>
+          <td><div class="bm-target">Under 5.2%</div></td>
+          <td><div class="bm-cadence">Every 3–6 mo</div></td>
+        </tr>
+        <tr>
+          <td><div class="bm-name">Serum 25-OH Vitamin D</div><div class="bm-desc">VDR governs 1,000+ genes including telomerase</div></td>
+          <td><div class="bm-target">50–70 ng/mL</div></td>
+          <td><div class="bm-cadence">Every 6 mo</div></td>
+        </tr>
+        <tr>
+          <td><div class="bm-name">VO2max</div><div class="bm-desc">Strongest single predictor of mortality in the literature</div></td>
+          <td><div class="bm-target">Top quintile for age</div></td>
+          <td><div class="bm-cadence">Every 6–12 mo</div></td>
+        </tr>
+        <tr>
+          <td><div class="bm-name">ApoB</div><div class="bm-desc">Actual cardiovascular risk — standard LDL misses this</div></td>
+          <td><div class="bm-target">Under 80 mg/dL</div></td>
+          <td><div class="bm-cadence">Every 6–12 mo</div></td>
+        </tr>
+        <tr>
+          <td><div class="bm-name">Epigenetic age clock (DunedinPACE)</div><div class="bm-desc">DNA methylation-based biological age — the integrated scorecard</div></td>
+          <td><div class="bm-target">Pace &lt; 1.0</div></td>
+          <td><div class="bm-cadence">Annually</div></td>
+        </tr>
+        <tr>
+          <td><div class="bm-name">Grip strength</div><div class="bm-desc">Predicts all-cause mortality. Proxy for total lean mass and neuromuscular function.</div></td>
+          <td><div class="bm-target">Maintain or increase</div></td>
+          <td><div class="bm-cadence">Every 6 mo</div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="truth-box reveal" style="margin-top:32px">
+    <blockquote>"An epigenetic age clock doesn't tell you how old you are. It tells you how fast you're aging. Slow the pace. That's the whole game."</blockquote>
+    <cite>DunedinPACE · Duke University</cite>
+  </div>
+</section>
+
+<!-- ───── WHAT DOESN'T WORK ───── -->
+<section id="bs" class="bg-dark reveal">
+  <div class="section-tag">The hall of shame</div>
+  <h2>SAVE<br>YOUR<br>MONEY</h2>
+  <p class="section-intro">These are the compounds that failed adversarial review. They're either debunked, overhyped, or have conflicts of interest so large you can see them from space.</p>
+
+  <div class="diet-cards">
+    <div class="diet-card reveal" style="background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.1)">
+      <div class="diet-icon" style="background:rgba(226,75,74,.15);font-size:20px">❌</div>
+      <div>
+        <div class="diet-rank-label" style="color:#f09595">Debunked</div>
+        <div class="diet-name" style="color:#fff">Resveratrol</div>
+        <p class="diet-text">The original longevity hype. David Sinclair's lab made it famous; subsequent labs couldn't replicate the core findings. Poor bioavailability. The original SIRT1 activation claim was methodologically flawed. Zero models in our 7-model review recommended it. 2/10.</p>
+      </div>
+    </div>
+    <div class="diet-card reveal" style="background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.1)">
+      <div class="diet-icon" style="background:rgba(226,75,74,.15);font-size:20px">⚠️</div>
+      <div>
+        <div class="diet-rank-label" style="color:#fac775">Commercial hype</div>
+        <div class="diet-name" style="color:#fff">NMN (standalone)</div>
+        <p class="diet-text">The mechanism is real — NAD+ does decline with age, and it matters. But Sinclair has financial relationships with NMN companies. The product quality in the market is terrible. And you're adding fuel while ignoring the drain: CD38 enzyme destroys NAD+ faster with age. Add apigenin (from parsley) first — it blocks the drain. Cheaper, more targeted.</p>
+      </div>
+    </div>
+    <div class="diet-card reveal" style="background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.1)">
+      <div class="diet-icon" style="background:rgba(226,75,74,.15);font-size:20px">💸</div>
+      <div>
+        <div class="diet-rank-label" style="color:#fac775">Overpriced hype</div>
+        <div class="diet-name" style="color:#fff">Most "longevity stacks"</div>
+        <p class="diet-text">$150–300/month bundles with 12 ingredients at sub-therapeutic doses, half of which have no human trial data. The supplement industry is not your friend. It profits from your uncertainty. GlyNAC and creatine and magnesium cost $40/month combined and have better data than almost anything they're selling.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───── FOOTER ───── -->
+<footer>
+  <p style="font-size:20px;margin-bottom:12px">⚡</p>
+  <p>Built from <strong>7-model adversarial AI review</strong> of 200+ studies.</p>
+  <p style="margin-top:6px">Not medical advice. Talk to your doctor before making changes.</p>
+  <p style="margin-top:6px">Sources: PREDIMED trial · Laukkanen Finnish cohort · Kokkinos NEJM 2022 · Baylor GlyNAC RCTs · Singh et al. Science 2023 · Nedergaard glymphatic research · Timeline Biosciences Urolithin A Phase 2</p>
+  <p style="margin-top:16px;color:rgba(255,255,255,.25)">© 2025 · Share freely. This information deserves to exist in the world.</p>
+</footer>
+
+<script>
+// ── PROGRESS BAR ──
+window.addEventListener('scroll',()=>{
+  const h=document.documentElement;
+  const pct=(h.scrollTop||document.body.scrollTop)/((h.scrollHeight||document.body.scrollHeight)-h.clientHeight)*100;
+  document.getElementById('prog').style.width=Math.min(pct,100)+'%';
+});
+
+// ── NAV ACTIVE STATE ──
+const sections=document.querySelectorAll('section[id]');
+const navLinks=document.querySelectorAll('.nav-links a');
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      navLinks.forEach(a=>{
+        a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id);
+      });
+    }
+  });
+},{threshold:.4});
+sections.forEach(s=>observer.observe(s));
+
+// ── REVEAL ON SCROLL ──
+const revealObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.classList.add('visible');
+      revealObs.unobserve(e.target);
+    }
+  });
+},{threshold:.08,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>revealObs.observe(el));
+
+// ── COUNT UP ──
+function countUp(el){
+  const target=+el.getAttribute('data-count');
+  const duration=1800;
+  const start=performance.now();
+  const step=ts=>{
+    const progress=Math.min((ts-start)/duration,1);
+    const ease=1-Math.pow(1-progress,3);
+    el.textContent=Math.round(target*ease);
+    if(progress<1)requestAnimationFrame(step);
+    else el.textContent=target;
+  };
+  requestAnimationFrame(step);
+}
+const countObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.querySelectorAll('[data-count]').forEach(countUp);
+      countObs.unobserve(e.target);
+    }
+  });
+},{threshold:.5});
+document.querySelectorAll('.hero-stats,.stats-grid').forEach(el=>countObs.observe(el));
+
+// ── BAR CHART ANIMATE ──
+const barObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.querySelectorAll('.bar-fill').forEach(bar=>{
+        setTimeout(()=>{bar.style.width=bar.getAttribute('data-width')+'%'},100);
+      });
+      barObs.unobserve(e.target);
+    }
+  });
+},{threshold:.3});
+document.querySelectorAll('#effect-chart').forEach(el=>barObs.observe(el));
+
+// ── SUPPLEMENT ACCORDION ──
+function toggleSupp(item){
+  const detail=item.querySelector('.supp-detail');
+  const isOpen=detail.classList.toggle('open');
+  item.classList.toggle('open',isOpen);
+}
+
+// ── SMOOTH SCROLL FOR NAV ──
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    e.preventDefault();
+    const target=document.querySelector(a.getAttribute('href'));
+    if(target)target.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+});
+</script>
+</body>
+</html>
